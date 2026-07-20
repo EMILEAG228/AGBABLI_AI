@@ -1,0 +1,17 @@
+{
+  "name": "AGBABLI AI",
+  "short_name": "AGBABLI AI",
+  "description": "Ton assistant IA personnel vocal 100% privé",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff1a1a",
+  "icons": [
+    {
+      "src": "https://amibagroue.wordpress.com/wp-content/uploads/2024/12/img_0227-1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
