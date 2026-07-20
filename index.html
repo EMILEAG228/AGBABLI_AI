@@ -9,6 +9,21 @@
     <link rel="icon" href="https://amibagroue.wordpress.com/wp-content/uploads/2024/12/img_0227-1.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="version" content="v7">
+<script>
+// Force reload si nouvelle version détectée
+const VERSION = 'v7';
+if (localStorage.getItem('agbabli_version') !== VERSION) {
+    localStorage.setItem('agbabli_version', VERSION);
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(regs => {
+            regs.forEach(reg => reg.unregister());
+        });
+    }
+    caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+    window.location.reload(true);
+}
+</script>
     <style>
         :root {
             --red: #ff1a1a; --red-dark: #b30000; --black: #0a0a0a; --black-light: #141414;
